@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Pundaquit</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <header id="site-header" class="site-header"></header>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Do you have any suggestions for areas that can be improved to highten the Pundaquit experience?</h4>
+            </div>
+
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+
+                    <div class="list-group">
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="">
+                            Signage
+                            <p class="improvement-text">Clearer directional signs for trails (to falls, coves) and basic information for tourists would be helpful.</p>
+                        </label>
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="">
+                            Roads & Paths
+                            <p class="improvement-text">Improve rougher roads leading to trailheads and ensure clear, safe and maintained paths for hikers.</p>
+                        </label>
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="">
+                            More activities 
+                            <p class="improvement-text">(give some examples in the suggestion box below)</p>
+                        </label>
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="">
+                            Reduce litter
+                            <p class="improvement-text">Implement stricter trash policies and provide more bins, especially around popular trekking routes and waterfalls (like Pundaquit Falls) and beach areas.</p>
+                        </label>
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="">
+                            Manage Crowds
+                            <p class="improvement-text">Implement booking systems for popular spots during peak times to avoid overcrowding.</p>
+                        </label>
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" value="">
+                            Local Guide Management
+                            <p class="improvement-text">Formalize guide fees and ensure guides are well-trained, as some users find pricing inconsistent.</p>
+                        </label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Other suggestions</label>
+                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" disabled>Submit</button>
+                </form>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script>
+        document.onended = loadHtmlModule('site-header', 'modules/navbar.html');
+    </script>
+
+</body>
+
+</html>

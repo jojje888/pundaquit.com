@@ -29,3 +29,7 @@
     height: 60px;
     object-fit: cover;
 }
+
+.improvement-text {
+    margin-left: 25px;
+}
