@@ -15,3 +15,12 @@ async function loadHtmlModule(elementId, filePath) {
         document.getElementById(elementId).innerHTML = 'Page not found.';
     }
 }
+
+function loadEvent(url, place_holder_id) {
+    fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById(place_holder_id).innerHTML = html;
+        });
+}
+

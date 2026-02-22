@@ -41,7 +41,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Anawangin Breeze Resort</h5>
                         <p class="card-text">A quiet beachfront hideaway where nipa cottages face wide, pine-lined shores and evenings end with bonfires under star-heavy skies.</p>
-                        <a href="hotel_details.html" class="btn btn-primary">Details</a>
+                        <!-- <a href="hotel_details.html" class="btn btn-primary">Details</a> -->
+                        <!-- <button type="button" class="btn btn-info" onclick="loadModalContent('hotel_details.html');">Details</button> -->
+                        <button class="btn btn-info" command="show-modal" commandfor="my-dialog">Details</button>
                     </div>
                 </div>
             </div>
@@ -144,6 +146,30 @@
         </div>
     </div>
 
+    <!-- Modal Container -->
+    <dialog id="my-dialog" style="margin: auto; padding: 10px; border-radius: 5px; border: solid 2px silver; min-width: 400px; background-color: antiquewhite;">
+        <div>
+            <div style="display: flex;">
+                <h4>Anawangin Breeze Resort</h4>
+                <button class="close" commandfor="my-dialog" command="close" style="margin-left: auto; padding: 0; width: 20px; height: 30px;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>A family friendly resort with beach access.</p>
+    
+                <h5>Facilities</h5>
+                <ul>
+                    <li>20 rooms</li>
+                    <li>Restaurant</li>
+                    <li>Free parking</li>
+                    <li>Free WiFi</li>
+                </ul>
+            </div>
+            <div style="text-align: center;">
+                <button class="btn btn-primary" commandfor="my-dialog" command="close">Close</button>
+            </div>
+        </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -154,16 +180,27 @@
     <script>
         document.onload = loadHtmlModule('site-header', 'modules/navbar.html');
     </script>
+
     <script>
+        function loadModalContent(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('modal-placeholder').innerHTML = html;
+                    new bootstrap.Modal(document.getElementById('details_modal')).show();
+            });
+        }
+/*        
         $(document).ready(function(){
             $('#loadModalBtn').click(function(){
                 // Load the modal file into the container
-                $('#modalContainer').load('hotel.html #myModal', function(){
+                $('#modalContainer').load('hotel_details.html #details_modal', function(){
                     // Show the modal after it is loaded
-                    $('#myModal').modal('show');
+                    $('#details_modal').modal({ show: true});
                 });
             });
         });
+*/        
     </script>
 </body>
 
