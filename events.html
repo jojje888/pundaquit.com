@@ -86,7 +86,8 @@
                 </div>
 
                 <div class="tab-pane fade" id="list-special" role="tabpanel" aria-labelledby="list-special-list">
-                    <div class="event-content" id="valentines_day"></div>
+                    <div class="event-content special-event" id="valentines_day"></div>
+                    <div class="event-content special-event" id="steak_day"></div>
                 </div>
             </div>
 
@@ -106,6 +107,7 @@
         function on_load() {
             loadHtmlModule('site-header', 'modules/navbar.html');
             loadHtmlModule('valentines_day', 'events/valentines_day.html');
+            loadHtmlModule('steak_day', 'events/steak_day.html');
             loadHtmlModule('pubquiz_week', 'events/pubquiz.html');
             loadHtmlModule('pubquiz', 'events/pubquiz.html');
         }
