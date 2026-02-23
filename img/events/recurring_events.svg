@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1"
+     width="512" height="512" viewbox="0 0 512 512"
+     xmlns="http://www.w3.org/2000/svg">
+    
+    <style>
+        .background { fill: white; width: 100%; height:100%; }
+        .arc-base { stroke: #6989C2; stroke-width: 20px; stroke-linecap: round; fill: transparent; }
+        .calendar-rect { fill: #BACCDC; stroke: #28364F; stroke-width: 4px; filter: drop-shadow(8px 8px 5px rgba(216, 230, 241, 0.7)); }
+        .calendar-rect2 { fill: #DBE4F1; stroke: #28364F; stroke-width: 4px; filter: drop-shadow(8px 8px 5px rgba(216, 230, 241, 0.7)); }
+        .calendar-top { fill: #FFC0C4; stroke: #28364F; stroke-width: 4;}
+        .calendar-top2 { fill: #F16665; stroke: transparent; stroke-width: 4;}
+        .calendar-corner { fill: #6B88C4; }
+        .hole { fill: white; stroke: #28364F; stroke-width: 3px; }
+        .binder { stroke: #28364F; stroke-width: 2.5px; fill: silver; }
+        .day { stroke: #28364F; stroke-width: 2px; fill: transparent; width: 27px; height: 36px; rx: 5px; ry: 5px; }
+        .sunday { fill: #E34546;}
+    </style>
+    
+    <!-- Background -->
+    <rect class="background" />
+    
+    <!-- Circular arrows -->    
+    <g>
+        <path class="arc-base" d="M26 256 
+                                  A 230 230 0 0 1 416 90 
+                                  m 0 0 l -46 3 m 46 -3 l -2 -46" />
+        <path class="arc-base" d="M438 114 
+                                  A 230 230 0 0 1 483 218" />
+        <path class="arc-base" d="M486 256 
+                                  A 230 230 0 0 1 106 428 
+                                  m 0 0 l 3 46 m -3 -46 l 46 -4" />
+        <path class="arc-base" d="M74 396 
+                                  A 230 230 0 0 1 30 296" />
+    </g>
+    
+    <!-- Calendar base -->
+    <g>
+        <rect class="calendar-rect" x="128" y="130" width="256" height="256" rx="15" ry="15" />
+        <rect class="calendar-corner" x="300" y="300" width="76" height="76" rx="15" ry="15" />
+        <path class="calendar-rect2" d="M 139 190 l 0 174 A 15 15 0 0 0 154 374 l 160 0 A 75 75 0 0 0 374 322 l 0 -132 Z" />
+        
+        <path class="calendar-top" d="M 128 192 l 0 -48 A 15 15 0 0 1 143 130 l 226 0 A 15 15 0 0 1 384 145 l 0 45 l -256 0" />        
+        <path class="calendar-top2" d="M 138 188 l 0 -38 A 15 15 0 0 1 148 140 l 224 0 A 15 15 0 0 1 382 148 l 0 40" />
+    </g>
+    
+    <!-- Binder hole left -->
+    <g transform="translate(150, 100)">
+        <circle class="hole" cx="31" cy="58" r="15" />
+        <rect class="binder" x="21" y="5" width="20" height="60" rx="10" ry="10" />
+    </g>
+    <!-- Binder hole right -->
+    <g transform="translate(301, 100)">
+        <circle class="hole" cx="31" cy="58" r="15" />
+        <rect class="binder" x="21" y="5" width="20" height="60" rx="10" ry="10" />
+    </g>
+    
+    <!-- Calendar days -->
+    <g transform="translate(149, 202)">
+        <!-- <rect class="day" x="1" y="1" /> -->
+        <rect class="day" x="32" y="1" />
+        <rect class="day" x="63" y="1" />
+        <rect class="day" x="94" y="1" />
+        <rect class="day" x="125" y="1" />
+        <rect class="day" x="156" y="1" />
+        <rect class="day sunday" x="187" y="1" />
+        
+        <rect class="day" x="1" y="42" />
+        <rect class="day" x="32" y="42" />
+        <rect class="day" x="63" y="42" />
+        <rect class="day" x="94" y="42" />
+        <rect class="day" x="125" y="42" />
+        <rect class="day" x="156" y="42" />
+        <rect class="day sunday" x="187" y="42" />
+        
+        <rect class="day" x="1" y="84" />
+        <rect class="day" x="32" y="84" />
+        <rect class="day" x="63" y="84" />
+        <rect class="day" x="94" y="84" />
+        <rect class="day" x="125" y="84" />
+        <rect class="day" x="156" y="84" />
+        <rect class="day sunday" x="187" y="84" />
+        
+        <rect class="day" x="1" y="125" />
+        <rect class="day" x="32" y="125" />
+        <rect class="day" x="63" y="125" />
+        <rect class="day" x="94" y="125" />
+        <rect class="day" x="125" y="125" />
+        <!-- <rect class="day" x="156" y="125" />
+             <rect class="day sunday" x="187" y="125" /> -->
+     </g>
+    
+</svg>
