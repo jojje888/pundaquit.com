@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1"
+     width="512" height="512" viewbox="0 0 512 512"
+     xmlns="http://www.w3.org/2000/svg">
+    
+    <style>
+        .background { fill: white; }
+        .frame { stroke: black; stroke-width: 8px; fill: silver; }
+        .inner1 { stroke: black; stroke-width: 4px; fill: transparent; }
+        .inner2 { stroke: black; stroke-width: 4px; fill: transparent; }
+        .title { fill: black; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 60px; text-anchor: center;}
+        .town { fill: black; font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 36px; text-anchor: center;}
+        .top { stroke: black; stroke-width: 4px; fill: transparent; }
+        .blue { stroke: black; stroke-width: 4px; fill: blue; }
+        .red { stroke: black; stroke-width: 4px; fill: red; }
+        .yellow { stroke: black; stroke-width: 4px; fill: yellow; }
+        .sun { stroke: black; stroke-width: 4px; fill: transparent; }
+        .beach {stroke: blue; fill: transparent;}
+        .island {stroke: brown; stroke-width: 2.5px; fill: transparent; }
+    </style>
+    
+    <rect class="background" x="0" y="0" width="100%" height="100%" />
+    
+    <g transform="translate(102, 210)">
+        <rect class="beach" x="0" y="0" width="310" height="207" />
+    </g>
+    
+    <circle class="frame" cx="256" cy="256" r="250" />
+    <circle class="inner1" cx="256" cy="256" r="170" />
+    
+    <g>
+        <path id="barangay" fill="none" d="M 80 320 A 188 188 0 1 1 432 320" />
+        <text class="title">
+            <textPath href="#barangay" startOffset="0">BARANGAY PUNDAQUIT</textPath>
+        </text>
+    </g>
+    
+    <g>    
+        <path id="town" fill="none" d="M 60 360 A 220 220 1 0 0 452 360" />
+        <text class="town">
+            <textPath href="#town" startOffset="25">SAN ANTONIO ZAMBALES</textPath>
+        </text>
+    </g>
+    
+   
+    <circle class="inner2" cx="256" cy="256" r="170" />
+<!--
+    <g transform="translate(102, 210)">
+        <rect class="beach" x="0" y="0" width="310" height="207" />
+        <path class="island" d="M 0 118 l 23 0 
+                                Q 29 114 30 109 
+                                Q 34 104 39 98 
+                                Q 43 97 45 97 
+                                Q 50 100 56 101 
+                                Q 63 103 69 106
+                                Q 76 107 80 106
+                                Q 85 108 90 112
+                                Q 91 108 94 107
+                                Q 97 106 102 109
+                                Q 106 110 116 111
+                                Q 119 108 127 103
+                                Q 132 103 140 104
+                                Q 147 105 152 108
+                                Q 156 108 162 110
+                                Q 163 112 168 114
+                                Q 174 115 174 118 
+                                l 60 0 
+                                Q 239 112 242 114
+                                Q 244 111 247 113
+                                Q 251 109 256 110
+                                Q 267 112 273 112
+                                Q 280 114 285 118
+                                l 21 0" />
+    </g>
+    -->
+    <path class="top" d="M 88 230 l 336 0" />
+    <path class="yellow" d="M 256 157 l -60 -58 a 170 170 0 0 1 122 0 Z" />
+    <circle class="sun" cx="256" cy="156" r="45" />
+    <path class="blue" d="M 88 230 l 168 0 l 0 -75 l -60 -58 A 170 170 0 0 0 88 230 Z" />
+    <path class="red"  d="M 256 230 l 0 -75 l 60 -58 A 170 170 0 0 1 424 230 Z" />
+    
+    <!-- Long rays -->
+    <line class="sun" x1="237" x2="226" y1="114" y2="91" />
+    <line class="sun" x1="256" x2="256" y1="111" y2="88" />
+    <line class="sun" x1="275" x2="286" y1="114" y2="91" />
+    
+    <!-- short rays -->
+    <line class="sun" x1="230" x2="221" y1="119" y2="106" />
+    <line class="sun" x1="247" x2="243" y1="114" y2="98" />
+    <line class="sun" x1="266" x2="270" y1="114" y2="98" />
+    <line class="sun" x1="282" x2="291" y1="119" y2="106" />
+    
+</svg>
