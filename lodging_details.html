@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Pundaquit</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <style>
+        /* ===== Overlay ===== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(18, 38, 54, 0.65);
+            /* Deep sea evening */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+
+        /* ===== Modal Card ===== */
+        .modal {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            background: #FFFCF7;
+            /* Soft sand */
+            width: 90%;
+            max-width: 640px;
+            height: 80vh;
+            border-radius: 14px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            animation: modalFade 0.3s ease;
+            font-family: "Inter", sans-serif;
+        }
+
+        /* ===== Header ===== */
+        .modal-header {
+              background: linear-gradient(
+                135deg,
+                #264653 0%,     /* Deep ocean */
+                #2A6F97 40%,    /* Sea blue */
+                #DDBB6A 85%,    /* Sunset gold */
+                #E89A5C 100%    /* Soft coral */
+            );
+
+            color: #FFFFFF;
+            padding: 22px 28px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .header-close {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            margin-left: auto;
+            padding: 6px;
+            width: 30px;
+            height: 30px;
+            font-size: 20pt;
+            border-left: solid 1.5px transparent;
+            border-top: solid 1.5px transparent;
+            border-bottom: solid 2px silver;
+            border-right: solid 2px silver;
+        }
+
+        /* ===== Body ===== */
+        .modal-body {
+            flex: 1; /* This makes the main content grow to fill the remaining space */
+            padding: 28px;
+            color: #2F3E46;
+            line-height: 1.6;
+        }
+
+        .modal-body h3 {
+            color: #52796F;
+            /* Soft coastal green */
+            margin-top: 0;
+        }
+
+        .modal-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+        }
+
+        .modal-body li {
+            padding: 8px 0;
+            border-bottom: 1px solid #EFEAE4;
+        }
+
+        .modal-body li:last-child {
+            border-bottom: none;
+        }
+
+        /* ===== Icons ===== */
+        .modal-body i,
+        .modal-body svg {
+            color: #E9C46A;
+            /* Sunset gold */
+            margin-right: 8px;
+        }
+
+        /* ===== Footer / Buttons ===== */
+        .modal-footer {
+            padding: 20px 28px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            background: #F7F3ED;
+        }
+
+        .modal-button {
+            padding: 10px 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.25s ease;
+        }
+
+        .modal-button.primary {
+            background: #F4A261;
+            /* Warm coral */
+            color: #FFFFFF;
+        }
+
+        .modal-button.primary:hover {
+            background: #E76F51;
+            transform: translateY(-2px);
+        }
+
+        .modal-button.secondary {
+            background: transparent;
+            color: #264653;
+        }
+
+        .modal-button.secondary:hover {
+            background: rgba(38, 70, 83, 0.08);
+        }
+
+        /* ===== Animation ===== */
+        @keyframes modalFade {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid modal-overlay">
+
+        <dialog class="modal" id="details-dialog">
+            <header class="modal-header">
+                Anawangin Breeze Resort
+                <button class="header-close" commandfor="details-dialog" command="close"><span
+                        aria-hidden="true">&times;</span></button>
+                </header>
+
+            <main class="modal-body">
+                <h3>Hotel Facilities</h3>
+                <ul>
+                    <li>Beachfront Access</li>
+                    <li>Restaurant</li>
+                    <li>Free parking</li>
+                    <li>Free WiFi</li>
+                </ul>
+
+                <h3>Room Amenities</h3>
+                <ul>
+                    <li>Air Conditioning</li>
+                    <li>Private Bathroom</li>
+                    <li>Free WiFi</li>
+                    <li>Complimentary Drinking Water</li>
+                </ul>
+            </main>
+
+            <footer class="modal-footer">
+                <button class="modal-button primary" commandfor="details-dialog" command="close">Close</button>
+            </footer>
+        </dialog>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
